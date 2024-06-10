@@ -10,7 +10,7 @@ This is the source code for my personal portfolio page. The page consists of sec
 
 ## Usage
 
-To view the portfolio page, simply open the [Live deploy]() in a web browser. No additional setup is required.
+To view the portfolio page, simply open the [Live deploy](https://aksel-oldeide.netlify.app) in a web browser. No additional setup is required.
 
 ## Author
 
