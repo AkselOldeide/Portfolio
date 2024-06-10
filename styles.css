@@ -1,0 +1,143 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #4d4d4d;
+}
+
+
+#about-me, footer {
+    text-align: center;
+    padding: 50px;
+    background-color: #ffffff;
+}
+
+footer p a{
+
+    color: #333;
+}
+
+footer p a:hover{
+    text-decoration: none;
+    color: #575757;
+}
+
+#about-me img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+#about-me .details {
+    margin-top: 20px;
+}
+
+#projects {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.project {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    margin: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.project-container {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.image-container {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+    flex-grow: 1;
+}
+
+.image-container h2 {
+    background-color: grey;
+    margin: 0;
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px; /* Adjust this value if needed */
+}
+
+.description {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 0;
+    transition: top 0.3s ease;
+}
+
+.project:hover .image-container {
+    transform: translateY(-100%);
+}
+
+.project:hover .description {
+    top: 0;
+}
+
+.project-container a:last-child{
+    display: none;
+}
+
+.github-link {
+    display: block;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2; /* Ensure it stays above the description during the slide */
+}
+
+.github-link:hover{
+    color: yellow;
+}
+
+@media (max-width: 768px) {
+    .project:hover .image-container {
+        transform: none;
+    }
+
+    .project:hover .description {
+        top: 100%;
+    }
+
+    .github-link {
+        position: relative;
+        bottom: 0;
+    }
+}
